@@ -1,1 +1,3 @@
-<p align="center"><img href="https://raw.githubusercontent.com/brickhill-community/Beverage/main/beverage.png"></img></p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/brickhill-community/Beverage/main/beverage.png"></img>
+</p>
