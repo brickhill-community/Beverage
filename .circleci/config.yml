@@ -7,4 +7,4 @@ jobs:
             - run: cargo --version
             - run:
                 name: tests
-                command: "cargo run"
+                command: "HOME=./ cargo run"
