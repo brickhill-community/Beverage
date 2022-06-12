@@ -9,8 +9,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let launcher = format!("{}/.brickhill/launcher", home);
 
     fs::create_dir_all(path)?;
-    let response = get("https://brkcdn.com/client/Player.exe")?.text()?;
-    fs::write(client, response)?;
+    let clientbody = get("https://brkcdn.com/client/Player.exe")?.text()?;
+    fs::write(client, clientbody)?;
 
     fs::write(format!("{}/.local/share/applications/brick-hill.desktop", home),
     format!("[Desktop Entry]
@@ -27,7 +27,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .arg("x-scheme-handler/brickhill.legacy")
         .spawn()?;
 
-    
+    let launcherbody = get("https://raw.githubusercontent.com/brickhill-community/Beverage/main/launcher")?.text()?;
+    fs::write(launcher, launcherbody)?;
 
     println!("Finished installation!");
     Ok(())
