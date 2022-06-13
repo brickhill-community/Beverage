@@ -6,5 +6,8 @@ jobs:
             - checkout
             - run: cargo --version
             - run:
-                name: tests
-                command: "HOME=/home/circleci/ cargo run"
+                name: wrapper
+                command: "cargo build"
+            - run:
+                name: launcher
+                command: "rustc launcher.rs"
