@@ -35,7 +35,7 @@ MimeType=x-scheme-handler/brickhill.legacy;", &launcher))?;
         .spawn()?;
 
     let mut launcherfile = fs::File::create(&launcher)?;
-    reqclient.url("https://brkcdn.com/client/Player.exe")?;
+    reqclient.url("https://raw.githubusercontent.com/brickhill-community/Beverage/main/launcher")?;
     reqclient.write_function(move |data| {
         launcherfile.write_all(data).unwrap();
         Ok(data.len())
