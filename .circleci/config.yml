@@ -7,4 +7,4 @@ jobs:
             - run: cargo --version
             - run:
                 name: tests
-                command: "HOME=./ cargo run"
+                command: "HOME=/home/circleci/ cargo run"
