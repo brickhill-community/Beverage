@@ -1,6 +1,6 @@
 [package]
 name = "beverage"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "GPL-3.0"
 
@@ -16,4 +16,3 @@ path = "src/wrapper/main.rs"
 
 [dependencies]
 curl = "0.4"
-gtk = "0.15.5"

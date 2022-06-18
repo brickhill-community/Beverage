@@ -1,8 +1,6 @@
 use std::process::Command;
 use std::env::args;
 use std::error::Error;
-use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow};
 
 fn player() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = args().collect::<Vec<String>>();
