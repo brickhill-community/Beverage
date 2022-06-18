@@ -10,7 +10,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let path = format!("{}/.brickhill/Player/", home);
     let client = format!("{}/.brickhill/Player.exe", home);
     let workshop = format!("{}/.brickhill/Workshop.exe", home);
-    let launcher = format!("{}/.brickhill/wrapper", home);
+    let launcher = format!("{}/.brickhill/beverage", home);
 
     fs::create_dir_all(path)?;
     let mut clientfile = fs::File::create(client)?;
@@ -45,7 +45,7 @@ MimeType=x-scheme-handler/brickhill.legacy;", &launcher))?;
         .spawn()?;
 
     let mut launcherfile = fs::File::create(&launcher)?;
-    reqclient.url("https://raw.githubusercontent.com/brickhill-community/Beverage/main/wrapper")?;
+    reqclient.url("https://raw.githubusercontent.com/brickhill-community/Beverage/main/beverage")?;
     reqclient.write_function(move |data| {
         launcherfile.write_all(data).unwrap();
         Ok(data.len())

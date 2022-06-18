@@ -7,7 +7,7 @@ jobs:
             - run: cargo --version
             - run:
                 name: wrapper
-                command: "cargo build --release"
+                command: "cargo build --release --bin beverage"
             - run:
-                name: launcher
-                command: "rustc launcher.rs"
+                name: installer
+                command: "cargo build --release --bin installer"
